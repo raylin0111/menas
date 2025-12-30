@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+}
+
+/* HEADER */
+.header {
+  background: #000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ventas { background: #2d9cdb; }
+.salir { background: #eb5757; }
+
+.titulo {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* GRID RESPONSIVE */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 0 15px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.precio {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.selector button {
+  padding: 5px 10px;
+}
+
+.btnAgregar {
+  width: 100%;
+  padding: 10px;
+  background: #2d9cdb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CARRITO */
+.flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  padding: 3px 7px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+/* PANEL */
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  padding: 15px;
+  box-shadow: -5px 0 15px rgba(0,0,0,.3);
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.cerrar {
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 6px;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.total {
+  text-align: right;
+}
+
+.btnConfirmar {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 480px) {
+  .card img {
+    height: 150px;
+  }
+}
